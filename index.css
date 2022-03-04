@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -11,6 +14,7 @@ h1 {
   font-size: 2.25rem;
   font-weight: 300;
   color: #ffff;
+  margin: 0;
 }
 
 h1 + p {
@@ -55,14 +59,53 @@ strong {
 
 .intro {
   background-image: url(./images/dark-ribs.jpg);
+  background-size: cover;
   background-color: #404040;
   padding: 0 0.5em 2em;
-  display: flex;
-  flex-direction: column;
 }
 
 /* main content */
 
 .main-content {
   padding: 2em 1em;
+}
+
+.container {
+  min-width: 400px;
+  margin: 0 auto;
+}
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50;
+}
+
+/* media query */
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-intro {
+    height: 100%;
+  }
 }
